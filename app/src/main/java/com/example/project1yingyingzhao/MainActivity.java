@@ -23,13 +23,9 @@ ActivityMainBinding binding;
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        binding.seekBar.setOnSeekBarChangeListener(new seekBarListener());
         binding.principle.addTextChangedListener(new principleListener());
-        binding.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                calculate(binding.radioGroup);
-            }
-        });
+        binding.seekBar.setOnSeekBarChangeListener(new seekBarListener());
+        binding.radioGroup.setOnCheckedChangeListener(new radioGroupListener());
         binding.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -40,6 +36,11 @@ ActivityMainBinding binding;
         binding.cal.setOnClickListener(this::calculate);
     }
 
+    private class radioGroupListener implements RadioGroup.OnCheckedChangeListener{
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            calculate(binding.radioGroup);
+        }
+    }
     private class seekBarListener implements SeekBar.OnSeekBarChangeListener {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
