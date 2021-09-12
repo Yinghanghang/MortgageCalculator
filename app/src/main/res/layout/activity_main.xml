@@ -13,7 +13,7 @@
         android:layout_width="121dp"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
-        android:text="Enter Principle ($):"
+        android:text="@string/principle"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="center"
@@ -26,6 +26,8 @@
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:ems="10"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor"
         android:inputType="numberSigned|numberDecimal"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +42,7 @@
         android:layout_height="27dp"
         android:layout_marginTop="15dp"
         android:textColor="@color/black"
-        android:text="Interest rate: 10%"
+        android:text="@string/rate"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -61,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:textColor="@color/black"
-        android:text="Select Loan Term"
+        android:text="@string/loan"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/seekBar"
         app:layout_constraintTop_toBottomOf="@+id/seekBar" />
@@ -78,26 +80,26 @@
             android:checked = "true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="15 years" />
+            android:text="@string/year15" />
 
         <RadioButton
             android:id="@+id/b20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="20 years" />
+            android:text="@string/year20" />
 
         <RadioButton
             android:id="@+id/b30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="30 years" />
+            android:text="@string/year30" />
     </RadioGroup>
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Include taxes and insurance (0.1%)"
+        android:text="@string/tax"
         android:textStyle="bold"
         android:checked="false"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
@@ -108,7 +110,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        android:text="CALCULATE"
+        android:text="@string/cal"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toStartOf="@+id/uninstall"
@@ -121,7 +123,7 @@
         style ="android:attr/borderlessButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="UNINSTALL"
+        android:text="@string/uni"
         android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/cal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -134,9 +136,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Press CALCULATE for monthly payments."
+        android:text="@string/result"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/cal"
         app:layout_constraintTop_toBottomOf="@+id/cal" />

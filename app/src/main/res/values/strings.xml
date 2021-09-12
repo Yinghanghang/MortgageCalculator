@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Mortgage Calculator by Yingying Zhao</string>
+    <string name="principle">Enter Principle ($):</string>
+    <string name="rate">Interest rate: 10%</string>
+    <string name="loan">Select Loan Term</string>
+    <string name="year15">15 years</string>
+    <string name="year20">20 years</string>
+    <string name="year30">30 years</string>
+    <string name="tax">Include taxes and insurance (0.1%)</string>
+    <string name="cal">CALCULATE</string>
+    <string name="uni">UNINSTALL</string>
+    <string name="result"> Press CALCULATE for monthly payments.</string>
 </resources>
